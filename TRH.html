@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>"TheRightHandLLP"</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+</head>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	.topnav {
+		overflow: hidden;
+		background-color: #e8ae3f;
+		position: sticky;
+		top: 0;
+	}
+
+	.topnav a {
+		float: right;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 1.5em;
+	}
+
+	.active {
+		background-color: #bed8d4;
+		color: white;
+	}
+
+	.topnav .icon {
+		display: none;
+	}
+
+	.dropdown {
+		float: left;
+		overflow: hidden;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.dropdown .dropbtn {
+		font-size: 1.5em;
+		border: none;
+		outline: none;
+		color: white;
+		padding: 14px 16px;
+		background-color: inherit;
+		font-family: inherit;
+		margin: 0;
+	}
+
+	.dropdown-content {
+		display: none;
+
+		top: 0;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		float: none;
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	.topnav a:hover,
+	.dropdown:hover .dropbtn {
+		background-color: #555;
+		color: white;
+	}
+
+	.dropdown-content a:hover {
+		background-color: #ddd;
+		color: black;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	@media all and (max-width: 800px) {
+		.topnav {
+			justify-content: space-around;
+		}
+	}
+
+	/*--
+@media all and (max-width: 500px) {
+
+  .topnav {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+--*/
+
+	.topnav li:last-of-type a {
+		border-bottom: none;
+	}
+
+	.title {
+		color: #e8ae3f;
+		font-family: fantasy;
+		margin-top: 0.5em;
+		text-align: center;
+		font-size: 7em;
+		text-shadow: 4px 5px 2px #000;
+		padding: 2rem;
+		margin-bottom: 0.5em;
+		position: inherit;
+		width: 100%;
+	}
+
+	h2 {
+		text-align: left;
+		font-size: 5rem;
+
+		text-shadow: 2px 3px 2px #000;
+		font-family: open sans, sans-serif;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		color: #e8ae3f;
+	}
+
+	h3 {
+		text-shadow: 2px 2px 1px #e8ae3f;
+		color: #000;
+		font-size: 5rem;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		font-family: open sans, sans-serif;
+		margin: 2rem;
+	}
+
+	hr .hr {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		margin-left: 2em;
+		margin-right: 2em;
+		border-width: 1px;
+		color: #e8ae3f;
+	}
+
+	body {
+		margin: 2rem;
+		background: url("https://s20.postimg.cc/tir8ceu8t/honeycomb.jpg") no-repeat center center fixed;
+		background-color: grey;
+		background-blend-mode: screen;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+	}
+
+	.grid-container {
+		display: -ms-flexbox;
+		/* IE 10 */
+		display: flex;
+		-ms-flex-wrap: wrap;
+		/* IE 10 */
+		flex-wrap: wrap;
+		padding: 0 4px;
+	}
+
+.text1 {
+		text-shadow: 2px 3px 4px #000;
+   	   background: rgb(0,0,0);
+		background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(24,10,10,1) 28%, rgb(232, 174, 63) 100%) no-repeat center center fixed;
+	}
+
+	.grid-row {
+		display: inline-block;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		content: "";
+		clear: both;
+
+	}
+
+	.text1Cover {
+		grid-column: 2 / span4;
+	}
+
+	img {
+		display: block;
+		width: auto;
+		padding: 0px;
+	}
+
+	.pic1 {
+		grid-area: hive;
+	}
+
+	.top {
+		color: #ffffff;
+		text-shadow: 2px 3px 4px #000;
+	}
+
+	p {
+		font-family: open sans, sans-serif;
+		font-size: 3rem;
+		margin: 2rem;
+		text-align: left;
+		color: #e8ae3f;
+		text-shadow: 2px 3px 4px #000;
+
+	}
+
+	p.name {
+		font-size: large;
+		text-align: center;
+		font-family: open sans, sans-serif;
+		/* text-shadow: 4px 4px 4px blue; */
+	}
+
+	pre {
+		text-align: center;
+		background-color: #e8ae3f;
+	}
+</style>
+
+<body>
+	<div class="topnav" id="myTopnav">
+		<a href="#home" style="font-size:40px"> </a>
+		<a href="/Users/jeffwhite/Desktop/TheRightHand/TRH.html">Home</a>
+		<a href="/Users/jeffwhite/Desktop/TheRightHand/contact.html">Contact</a>
+		<div class="dropdown">
+			<button class="dropbtn">Hives 
+      <i class="fa fa-caret-down"></i>
+    </button>
+			<div class="dropdown-content">
+				<a href="/Users/jeffwhite/Desktop/TheRightHand/TRH.html">Home</a>
+				<a href="#articles">Covers</a>
+				<a href="#cells">Woodenware</a>
+				<a href="#areas">Blog</a>
+			</div>
+		</div>
+		<a href="#about">About</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+	<h3 class="center">The Right Hand LLP</h3>
+	<hr class="hr">
+	<h1 class="title">The Beekeeper's Carpenter</h1>
+
+	<p class="top">"Beekeeping should be fun and not so worrisome.” — Naomi Price</p>
+	<br>
+	<h2><i class="fa fa-cubes" style="font-size:40px"></i> Hives</h2>
+	<div class="grid-container">
+		<div class="grid-row">
+			<div class="pic1"><img src="https://s20.postimg.cc/adnz2msfh/Valkarie.jpg" style="width:80%" alt="Valkyrie Hive"></div>
+			<br>
+			<div class="pic2"><img src="https://s20.postimg.cc/7jktp75ot/Valkyrie_Wstand.jpg" style="width:100%" alt="Valkyrie Hive"></div>
+			<br>
+			<div class="pic3"><img src="https://s20.postimg.cc/owv441ta5/valkyrie_Wframes.jpg" style="width:80%" alt="Hive"></div>
+			<br>
+			<div class="pic4"><img src="https://s20.postimg.cc/y4nckpq1p/Jan-_H-_Bruno-angle-2.jpg" style="width:75%" alt="brown lid"></div>
+			<br>
+			<div class="pic5"><img src="https://s20.postimg.cc/bfy5l50y5/Grey_Lid.jpg" style="width:80%" alt="grey lid"></div>
+			<br>
+			<div class="pic6"><img src="https://s20.postimg.cc/jlg7jbk25/open_Lid.jpg" style="width:80%" alt="open lid"></div>
+			<br>
+			<div class="pic7"><img src="https://s20.postimg.cc/re6vb9fql/additional_Window_Valkyrie.jpg" style="width:80%" alt="top view"></div>
+			<br>
+			<div class="text1">
+				<p>At The Right Hand LLP, our goal is to create high-quality woodenware that brings more “fun” and less “worry” to your beekeeping. Because happy bees and happy beekeepers go hand-in-hand.</p>
+			</div>
+		</div>
+	</div>
+	<br>
+	<h2><i class="fa fa-shield" style="font-size:40px"></i> Covers</h2>
+	<div class="grid-container">
+		<div class="grid-row">
+			<div class="Pic1"><img src="https://s20.postimg.cc/76tfiypz1/cover.jpg" style="width:50%" alt="covers"></div>
+			<br>
+			<div class="Pic2"><img src="https://s20.postimg.cc/jy7lphmwd/Dark-and-_Light-_Triple-_Layer-_Blankets.jpg" style="width:80%" alt="blankets"></div>
+			<br>
+			<div class="text1Cover">
+				<div class="text1">
+					<p>Shetland Felted Wool Inner Cover Great pasture here in the Northwest side of Redmond, Oregon! The idea for a wool cover (that would stay on the Canvas cover inside the hive all year long) was morphed from the Valhalla and Valkyrie Long Hives. Using
+						old blankets, folded sometimes four-layers thick, and based on current heat-loss research, it became clear that the bees gained a great advantage: Voila! old blankets became a gorgeous Wool Inner Cover. Our Shetland covers (made of a single layer
+						of wool), have themselves morphed into a three-layer mantle of re-purposed wool blanket, a thick-and-lofty inner layer of the well-loved Shetland wool, and an outer layer of long-lasting fabric. The wool side is placed directly on top of the Canvas
+						Cover (which is included with your Valkyrie Long Hive). Why is this recommended? Because the extra insulation helps the colony maintain optimum temperatures and humidity levels within the hive– all year long! Stay tuned for pictures and pricing–
+						coming soon!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<h2><i class="fa fa-cube" style="font-size:40px"></i> Woodenware</h2>
+	<div class="grid-container">
+		<div class="grid-row">
+			<div><img src="https://s20.postimg.cc/9o56q94ql/Valkyrie-_Stand.jpg" style="width:80%" alt="stand"></div>
+			<br>
+			<div><img src="https://s20.postimg.cc/418tsek3x/stand_Insulated.jpg" style="width:50%" alt="insulated stand"></div>
+			<br>
+			<div><a href='https://postimages.org/' target='_blank'><img src='https://s20.postimg.cc/wfe9cicvh/woodenware2.jpg' style="width:50%" alt='woodenware2'/></a></div>
+			<br>
+			<div><a href='https://postimages.org/' style="width:50%" target='_blank'><img src='https://s20.postimg.cc/dab02qqhp/woodenware1.jpg' style="width:50%" alt='woodenware1'/></a>
+			</div>
+			<br>
+			<div class="text1">
+				<p>There are those beekeepers who are committed to the Langstroth Hive and shall have no other. Sounds great, but, would you allow us to make your life so much easier?? Gone is the need for a reducer to fuss with; gone also the need to use wires or nails
+					to reduce the openings. Your options at the top of your hive (for feeders, insulation boxes, etc) haven’t changed but please do check these out: double-click the pictures and gaze at the finest Bottom Boxes you’ll ever see. Having said that, you
+					may be the beekeeper who will still need to use your Langstroth hives until the Spring when you’ll switch over to the Valkyrie (right?). You’re tired of using a reducer, and keeping away the marauders, and really: there must be an easier way to get
+					a more accurate picture of the colony health! Give yourself a break with our custom, hand-made bottom boxes. Placing the entrance at the back which is adjustable– voila! And, it helps keep the ladies calm. The double drawers will help give a lot
+					of information about colony health and the locking mechanism fools the predators. Yep, till your Valkyrie “upgrade” arrives, try these beauties.</p>
+			</div>
+		</div>
+	</div>
+	<br>
+	<h2><i class="fa fa-eject" style="font-size:40px"></i> Roofing</h2>
+	<div class="grid-container">
+		<div class="grid-row">
+			<div><img src="https://s20.postimg.cc/5292hwyn1/roof_detail.jpg" style="width:100%" alt="roof"></div>
+			<br>
+			<div class="text1">
+				<p>Our Valkyrie is really built to last, and we offer a two-year warranty on the working lid and hinges. Could it withstand an IED…? Sort of looks that way, and that’s how Bruce builds them. But, let’s just say it can surely withstand your local weather
+					conditions.
+				</p>
+			</div>
+		</div>
+	</div>
+	<br>
+	<footer>
+		<p class="name">~~> Jeff White design
+			<~~</p>
+				<pre><i class="fa fa-copyright"></i>copyright 2018</pre>
+	</footer>
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+</body>
+
+</html>
